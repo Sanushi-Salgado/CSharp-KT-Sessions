@@ -1,0 +1,15 @@
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\Mapper.exe
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\Mapper.deps.json
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\Mapper.runtimeconfig.json
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\Mapper.runtimeconfig.dev.json
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\Mapper.dll
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\Mapper.pdb
+D:\Workspaces\CSharpKTSessions\CSharpTraining\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.csprojAssemblyReference.cache
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.AssemblyInfoInputs.cache
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.AssemblyInfo.cs
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.csproj.CoreCompileInputs.cache
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.csproj.CopyComplete
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.dll
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.pdb
+D:\Workspaces\CSharpKTSessions\CSharpTraining\obj\Debug\netcoreapp3.1\Mapper.genruntimeconfig.cache
