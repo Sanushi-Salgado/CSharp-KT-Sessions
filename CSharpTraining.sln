@@ -3,15 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapper", "Mapper.csproj", "{F93D4815-E57B-43D9-AF80-1D7EBBE5F33E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectMapper", "ObjectMapper.csproj", "{F93D4815-E57B-43D9-AF80-1D7EBBE5F33E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constants", "..\Constants\Constants.csproj", "{81688E9D-8326-4498-81F4-B74036D4B7AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constants", "..\Constants\Constants.csproj", "{81688E9D-8326-4498-81F4-B74036D4B7AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCasting", "..\TypeConversion\TypeCasting.csproj", "{CEB4FDE0-AB72-43B7-9CA6-CE833613E4A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypeCasting", "..\TypeConversion\TypeCasting.csproj", "{CEB4FDE0-AB72-43B7-9CA6-CE833613E4A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "..\LINQ\LINQ.csproj", "{DBE3C5E0-4610-4215-846F-7E2DA43DF05F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "..\LINQ\LINQ.csproj", "{DBE3C5E0-4610-4215-846F-7E2DA43DF05F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstanceStatic", "..\Static\InstanceStatic.csproj", "{3177B9B2-E69F-4A90-AAB4-77D2F35B0EF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstanceStatic", "..\Static\InstanceStatic.csproj", "{3177B9B2-E69F-4A90-AAB4-77D2F35B0EF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Constants", "Constants", "{3C1EE8C1-89D1-4DF5-B12D-5AC6D6D14DC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InstanceStatic", "InstanceStatic", "{C1319268-293B-46D9-BBE2-95EE8881D180}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{A0511FE6-FC4C-4C1B-AA14-9158F9A37E43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AutoMapper", "AutoMapper", "{857F91B8-109A-4FB4-96FD-57520239534F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeCasting", "TypeCasting", "{A4BD3F02-C1B7-40CA-9087-B08295975854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +52,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F93D4815-E57B-43D9-AF80-1D7EBBE5F33E} = {857F91B8-109A-4FB4-96FD-57520239534F}
+		{81688E9D-8326-4498-81F4-B74036D4B7AD} = {3C1EE8C1-89D1-4DF5-B12D-5AC6D6D14DC7}
+		{CEB4FDE0-AB72-43B7-9CA6-CE833613E4A1} = {A4BD3F02-C1B7-40CA-9087-B08295975854}
+		{DBE3C5E0-4610-4215-846F-7E2DA43DF05F} = {A0511FE6-FC4C-4C1B-AA14-9158F9A37E43}
+		{3177B9B2-E69F-4A90-AAB4-77D2F35B0EF3} = {C1319268-293B-46D9-BBE2-95EE8881D180}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A5C53BB-7140-4427-92C2-404CA83F83BF}

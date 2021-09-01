@@ -1,5 +1,6 @@
-﻿using System;
-using System.Linq;
+﻿using AutoMapper;
+using ObjectMapping;
+using System;
 
 namespace CSharpTraining
 {
@@ -7,54 +8,60 @@ namespace CSharpTraining
     {
         static void Main(string[] args)
         {
-            int[] numbers = { 1, 92, 4, 23, 12, 128 };
-            string[] characters = { "I love", "coding" };
+            // Creating the source object
+            Student student = new Student
+            {
+                Name = "Sanushi",
+                Initials = "M S M Salgado",
+                Age = 12,
+                Faculty = "Department of Computing",
+                Grade = 7,
+            };
+
+            // Manually copying data from one object to another object 
+            StudentDTO studentDTO = new StudentDTO();
+            studentDTO.Name = student.Name;
+            studentDTO.Age = student.Age;
+            studentDTO.Grade = student.Grade;
+
+            // Print details
+            Console.WriteLine("Name: " + studentDTO.Name);
+            Console.WriteLine("Age: " + studentDTO.Age);
+            Console.WriteLine("Grade: " + studentDTO.Grade);
+            Console.WriteLine();
 
 
-            // Aggregate functions
-            Console.WriteLine("The no of elements is: {0}", numbers.Count());
-            Console.WriteLine("The minimum number is: {0}", numbers.Min());
-            Console.WriteLine("The maximum number is: {0}", numbers.Max());
-            Console.WriteLine("The sum is: {0}", numbers.Sum());
-            Console.WriteLine("The sum is: {0}", numbers.Aggregate((x, y) => x + y));
-            Console.WriteLine("The product is: {0}", numbers.Aggregate((x, y) => x * y));
-            Console.WriteLine("The string is: {0}", characters.Aggregate((x, y) => x + " " + y));
+            /* -------------------------------- Using C# AutoMapper -------------------------------- */
+            // Initialize the mapper
+            var config = new MapperConfiguration(cfg =>
+                cfg.CreateMap<Student, StudentDTO>()
+                .ForMember(dest => dest.NameWithInitials, action => action.MapFrom(source => source.Initials))
+                .ForMember(dest => dest.Department, action => action.MapFrom(source => source.Faculty))
+            );
 
+            var mapper = new Mapper(config);
 
-            // Sorting operations
-            Console.Write("In ascending order: ");
-            foreach (int num in numbers.OrderBy(x => x))
-                Console.Write(num + " ");
+            // Copying data from one object to another object 
+            var studentDTO1 = mapper.Map<Student, StudentDTO>(student);
+            var studentDTO2 = mapper.Map<StudentDTO>(student);
 
-            Console.Write("\nIn descending order: ");
-            foreach (int num in numbers.OrderByDescending(x => x))
-                Console.Write(num + " ");
+            Console.WriteLine("Name: " + studentDTO1.Name);
+            Console.WriteLine("Initials: " + studentDTO1.NameWithInitials);
+            Console.WriteLine("Age: " + studentDTO1.Age);
+            Console.WriteLine("Faculty: " + studentDTO1.Department);
+            Console.WriteLine("Grade: " + studentDTO1.Grade);
+            Console.WriteLine();
 
-            Console.Write("\nIn reverse order: ");
-            foreach (int num in numbers.Reverse())
-                Console.Write(num + " ");
-
-
-            // Partition operations
-            Console.Write("\nThe first 2 elements are: ");
-            foreach (int num in numbers.Take(2))
-                Console.Write(num + " ");
-
-            Console.Write("\nThe elements greater than 50 are: ");
-            foreach (int num in numbers.TakeWhile(x => x < 10))
-                Console.Write(num + " ");
-
-            Console.Write("\nThe elements except the first two: ");
-            foreach (int num in numbers.Skip(2))
-                Console.Write(num + " ");
-
-            //Console.Write("\nThe elements greater than 50 are: ");
-            //foreach (int num in numbers.SkipWhile(x => x > 50))
-            //    Console.Write(num + " ");
-
+            Console.WriteLine("Name: " + studentDTO2.Name);
+            Console.WriteLine("Initials: " + studentDTO2.NameWithInitials);
+            Console.WriteLine("Age: " + studentDTO2.Age);
+            Console.WriteLine("Faculty: " + studentDTO1.Department);
+            Console.WriteLine("Grade: " + studentDTO1.Grade);
 
 
             Console.ReadLine();
         }
+
+
     }
 }
